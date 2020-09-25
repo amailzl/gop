@@ -1,5 +1,5 @@
 # gop
-a cmd to fast change dir in ubuntu
+a cmd to fast change dir in terminal
 
 # dependency
 python3
