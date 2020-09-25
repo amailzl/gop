@@ -1,0 +1,43 @@
+#!/bin/bash
+
+function_print_usage(){
+	echo "*********************************"
+	echo "         worker ver0.01          "
+	echo "*********************************"
+	echo "usage :                         "
+	echo "init: init PATH              "
+	echo "*********************************"
+
+}
+
+function_init(){
+	echo "set PATH to ${local_bin}/"
+	sudo cp -rv ${worker_dir}/* ${python_dir}/* ${local_bin}
+	echo "start python init"
+	python3 ${local_bin}/envsetup.py
+	sudo chmod 777 ${local_bin}/gopath
+	echo "aliases file generating"
+	cp ${out_dir}/.bash_aliases_py_clone ~/.bash_aliases
+	echo "file generating complete"
+	echo 'run "source ~/.bash_aliases" to finish init'
+}
+
+#hide
+function_sync_gop(){
+	echo "sync gopath script to ${local_bin}/"
+	sudo cp -v ${worker_dir}/gopath ${local_bin}
+}
+
+
+worker_dir=$(pwd)
+local_bin="/usr/local/bin"
+python_dir="${worker_dir}/../python"
+out_dir="${worker_dir}/../out"
+
+if [[ $1 == "" ]]||[[ $1 == " " ]]||[[ $1 == "-h" ]]; then
+	function_print_usage
+elif [ $1 == "init" ]; then
+	function_init
+elif [ $1 == "syncgop" ]; then
+	function_sync_gop
+fi

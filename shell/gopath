@@ -1,0 +1,38 @@
+#!/bin/bash
+
+function_print_usage(){
+	echo "*****************************************************************"
+	echo "*                      gopath ver0.01                           *"
+	echo "*****************************************************************"
+	echo "func :                         "
+	echo "add [alias] [absPATH] : save 'alias' as a shortcut to absPATH         "
+	echo "del [alias] : remove a saved 'alias' as a shortcut to absPATH         "
+	echo "-----------------------------------------------------------------"
+
+	#token_insert_usage
+	echo "*****************************************************************"
+
+}
+
+function_add_usage(){
+	echo "parse args to python script"
+	fioc -f agop -a $1,$2
+}
+
+function_del_usage(){
+	echo "parse args to python script"
+	fioc -f dgop -a $1
+}
+
+#token_insert_dir
+ 
+
+if [[ $1 == "" ]]||[[ $1 == " " ]]||[[ $1 == "-h" ]]; then
+	function_print_usage
+elif [ $1 == "add" ]; then
+	function_add_usage $2 $3
+elif [ $1 == "del" ]; then
+	function_del_usage $2
+#token_insert_cmd
+fi
+
