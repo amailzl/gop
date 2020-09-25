@@ -22,7 +22,7 @@ after pull code from github
 		example: 
 		gop del b 
 
-#Usage
+# Usage
 	* after add an alias of a specific path , you can go to this path from whatever path or terminal you currently at by using cmd
 		gop [alias]
 
