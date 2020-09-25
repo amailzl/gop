@@ -17,9 +17,9 @@ function_init(){
 	python3 ${local_bin}/envsetup.py
 	sudo chmod 777 ${local_bin}/gopath
 	echo "aliases file generating"
-	cp ${out_dir}/.bash_aliases_py_clone ~/.bash_aliases
+	cp ${out_dir}/.bash_aliases_py_clone ~/.bash_aliases_gop
 	echo "file generating complete"
-	echo 'run "source ~/.bash_aliases" to finish init'
+	echo 'run "source ~/.bash_aliases_gop" to finish init'
 }
 
 #hide
