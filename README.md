@@ -1,21 +1,21 @@
 # gop
-a cmd to fast change dir in terminal
+	a cmd to fast change dir in terminal
 
 # dependency
-python3
+	python3
 
 # install
-after pull code from github
+	after pull code from github
 
-1.go to dir {gop_root}/shell, run 
-	./worker init
+	1.go to dir {gop_root}/shell, run 
+		./worker init
 
-2.if init succss, run 
-	source ~/.bash_aliases
+	2.if init succss, run 
+		source ~/.bash_aliases
 
 # Functions
 	gop add [alias] [absPATH]
-	example: 
+		example: 
 		gop add b /usr/local/bin
 
 	gop del [alias] 
