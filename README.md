@@ -11,7 +11,7 @@
 		./worker init
 
 	2.if init succss, run 
-		source ~/.bash_aliases
+		source ~/.bash_aliases_gop
 
 # Functions
 	gop add [alias] [absPATH]
